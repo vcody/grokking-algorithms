@@ -1,4 +1,16 @@
 from random import randint
+'''
+- Ch.1 Notes:
+# Best case: log(n)
+# Worst case: n
+
+# Big O run times (Fastest => Slowest):
+# 1. log(n)
+# 2. n
+# 3. n * log(n)
+# 4. n ^ 2
+# 5. n! 
+'''
 
 def generate_random_array(length):
     arr = []
@@ -41,6 +53,14 @@ print("Number selected:", random_item)
 print(binary_search(arr, random_item)) # True
 print(binary_search(arr, 250)) # False
 
-# Exercises
+'''
+- Exercises:
 # 1.1: 7, since 2 ^ 7 = 128
 # 1.2: 8, since 2 ^ 8 = 256
+
+# Exercises 
+# 1.3: log(n) - binary search 
+# 1.4: n - linear time search
+# 1.5: n - linear time search
+# 1.6: n - linear time search
+'''
