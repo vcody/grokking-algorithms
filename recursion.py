@@ -1,5 +1,5 @@
 '''
-- Notes:
+- Ch. 3 Notes:
 - Recursion defined as a process with:
     1. Base case
     2. Recursive case
