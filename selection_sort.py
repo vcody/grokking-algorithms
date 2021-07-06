@@ -37,9 +37,7 @@ def selection_sort(array):
 
 random_arr = generate_random_array(10)
 print("Pre-sort:", random_arr)
-
-sorted_arr = selection_sort(random_arr)
-print("Post-sort:", sorted_arr)
+print("Post-sort:", selection_sort(random_arr))
 
 '''
 - Exercises:
