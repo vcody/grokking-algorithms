@@ -1,4 +1,5 @@
 from random import randint
+
 '''
 - Ch. 4 Notes
 - Divide & Conquer algorithms (ex. quicksort)
