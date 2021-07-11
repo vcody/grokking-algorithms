@@ -9,6 +9,8 @@ Dijkstra's Algorithm steps:
     -> Use Bellman-Ford algorithm (todo)
 '''
 
+# ch7_example.png:
+
 graph = {}
 
 graph['start'] = {}
