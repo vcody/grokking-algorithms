@@ -39,12 +39,6 @@ parents['fin'] = None
 
 processed= []
 
-# While we have nodes to process...
-# 1. Grab node closest to start
-# 2. Update costs for its neighbors
-# 3. If any neighbors costs were updated, update parents also
-# 4. Mark node as processed, repeat until finished
-
 def find_lowest_cost_node(costs):
     lowest_cost = float('inf')
     lowest_cost_node = None
@@ -56,14 +50,27 @@ def find_lowest_cost_node(costs):
             lowest_cost_node = node
     return lowest_cost_node
 
+# While we have nodes to process...
+# 1. Grab node closest to start
+# 2. Update costs for its neighbors
+# 3. If any neighbors costs were updated, update parents also
+# 4. Mark node as processed, repeat until finished
+
 # Find cheapest node
 node = find_lowest_cost_node(costs)
 # Look through all nodes not processed yet
 while node is not None:
+    print("Node:", node)
+
     cost = costs[node]
     neighbors = graph[node]
+
+    print("cost/neighbors:", cost, neighbors)
+    
     # Check all neighbors
     for n in neighbors.keys():
+        print("n:", n) 
+
         new_cost = cost + neighbors[n]
         if costs[n] > new_cost:
             # Update cost
@@ -73,3 +80,5 @@ while node is not None:
     processed.append(node)
     # Find next node, repeat
     node = find_lowest_cost_node(costs)
+
+print(costs)
