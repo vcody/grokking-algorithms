@@ -50,9 +50,11 @@ def find_lowest_cost_node(costs):
 
 # Find cheapest node
 node = find_lowest_cost_node(costs)
-print('Lowest:', node)
+print('Node:', node)
 
 counter = 0
+
+print('Costs:', costs)
 
 while node is not None:
     print(node)
@@ -60,10 +62,16 @@ while node is not None:
     cost = costs[node]
     neighbors = graph2[node]
 
-    print(cost, neighbors)
+    print("cost/neighbors:", cost, neighbors)
 
     for n in neighbors.keys():
-        print(n)
-        break
+        print("n:", n)
+        
+        new_cost = cost + neighbors[n]
+        if costs[n] > new_cost:
+            costs[n] = new_cost
+            parents[n] = node
+    processed.append(node)
+    node = find_lowest_cost_node(costs)
 
     break 
