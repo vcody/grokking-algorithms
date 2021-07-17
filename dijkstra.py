@@ -80,5 +80,3 @@ while node is not None:
     processed.append(node)
     # Find next node, repeat
     node = find_lowest_cost_node(costs)
-
-print(costs)
